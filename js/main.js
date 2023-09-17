@@ -57,11 +57,30 @@ document.addEventListener('scroll', () => {
         hasFunctionRun2 = true;
     }
 });
-// var typed = new Typed('.type-it-1', {
-//     strings: [
-//         "Hello, I’m Raman from Mokama.",
-//     ],
-//     typeSpeed: 0,
-//     backSpeed: 0,
-//     loop: true
-// });
+
+var sendEmailButton = document.getElementById('sendEmailBtn');
+
+function openGmailWebsite() {
+    // https://mail.google.com/mail/u/0/?fs=1&tf=1&view=cm&to=ramanjee@gmail.com&su=Hello&body=This%20is%20to%20send
+
+    let subject = 'Hello Raman,';
+    let body = 'I%20am%20%3CYour%20Name%3E.'
+    window.open(`https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=ramanjee@gmail.com&su=${subject}&body=${body}`, '_blank');
+}
+
+function openGmailApp() {
+    var appUri = 'googlegmail://';
+    window.location.href = appUri;
+    setTimeout(function() {
+        window.location.href = 'https://mail.google.com';
+    }, 1000);
+}
+
+sendEmailButton.addEventListener('click', function() {
+    var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobileDevice) {
+        openGmailApp();
+    } else {
+        openGmailWebsite();
+    }
+});
