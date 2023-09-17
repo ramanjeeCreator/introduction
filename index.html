@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" id="container-1">
         <div class="carousel-inner">
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -28,15 +28,13 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="container-fluid bg-dark w-100 p-lg-3 pd-md-1 pd-lg-0 text-light row"
-        style="min-height: 100vh;background: linear-gradient(96deg, rgb(249 3 3), rgb(12 16 195), rgb(10 195 94));margin: 0;justify-content: flex-start;">
+    <div class="container-fluid bg-dark w-100 p-lg-3 pd-md-1 pd-lg-0 text-light row" id="container-2">
         <div class="col-lg-8 col-md-8 col-sm-7 h-100 p-0">
-            <h1 class="h1 type-it-1" id="head-user"
-                style="font-family: Superior title, Times New Roman, sans-serif;font-size: calc(3.375rem + 1.5vw) !important;">
+            <h1 class="h1 type-it-1" id="head-user">
                 Hello, I’m Raman from Mokama.
             </h1>
             <div class="add-class">
-                <ul style="font-family:  monospace;">
+                <ul>
                     <h5>Personal Details :-</h5>
                     <li>Full Name : <span id="fullname-user">Raman Jee</span></li>
                     <li>Address : <span id="address-user">Mokama</span></li>
@@ -54,8 +52,7 @@
                     </li>
                     <li>Twitter :- <a href="https://twitter.com/Raman_Jee_0806" id="twitter-user">@Raman_Jee_0806</a>
                     </li>
-                    <li>Facebook :- <a href="https://www.facebook.com/profile.php?id=100094300701717"
-                            id="facebook-user">ramanjee0806</a></li>
+                    <li>Facebook :- <a href="https://www.facebook.com/profile.php?id=100094300701717" id="facebook-user">ramanjee0806</a></li>
                 </ul>
             </div>
         </div>
@@ -63,75 +60,89 @@
             <img src="./Images/user.png" style="height: 100%;" alt="">
         </div>
     </div>
-    <div class="container-fluid bg-dark w-100 h-100 p-lg-5 pd-md-1 pd-lg-0 text-light row"
-        style="height: 100vh;background: #000;margin: 0;justify-content: center;z-index: 1000;">
+    <div class="container-fluid bg-dark w-100 h-100 p-lg-5 pd-md-1 pd-lg-0 text-light row" id="container-3">
         <div class="text-center">
-            <h1 style="font-size: calc(3rem + 1.5vw) !important;">Create your Own!</h1>
+            <h1 id="head-1">Create your Own!</h1>
         </div>
-        <div class="container-fluid bg-dark w-100 p-5 text-light row">
-            <div class="col-lg-5 col-md-11 col-sm-11 d-flex justify-content-center align-items-center">
-                <h1 class="h1 type-it-2"
-                    style="font-family: Superior title, Times New Roman, sans-serif;font-size: calc(2rem + 1.5vw) !important;">
+        <div class="container-fluid bg-dark w-100 p-lg-5 p-md-2 p-sm-0 text-light row">
+            <div class="col-lg-5 col-md-11 col-sm-11 d-flex justify-content-center align-items-center" style="height: 200px;">
+                <h1 class="h1 type-it-2" id="head-2">
                     Want to create your own? Let's fill it!
                 </h1>
             </div>
             <div class="col-lg-7 col-md-11 col-sm-11 img-fluid user">
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">First Name </span>
-                        <input type="text" aria-label="First name" class="rounded-0 form-control" id="first-name"
-                            placeholder="Raman" required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                <form class="row g-4 needs-validation" style="--bs-gutter-x: 3.5rem;" novalidate>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">First Name </span>
+                            <input type="text" aria-label="First name" class="rounded-0 form-control" id="first-name"
+                                placeholder="Raman" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Last Name </span>
-                        <input type="text" aria-label="Last name" class="rounded-0 form-control" id="last-name"
-                            placeholder="Jee" required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Last Name </span>
+                            <input type="text" aria-label="Last name" class="rounded-0 form-control" id="last-name"
+                                placeholder="Jee" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">City Name </span>
-                        <input type="text" class="form-control" placeholder="Mokama" aria-label="city" id="city-name"
-                            required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">City Name </span>
+                            <input type="text" class="form-control" placeholder="Mokama" aria-label="city"
+                                id="city-name" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Profession </span>
-                        <input type="text" class="form-control" placeholder="Student" aria-label="profession"
-                            id="profession" required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Profession </span>
+                            <input type="text" class="form-control" placeholder="Student" aria-label="profession"
+                                id="profession" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Age </span>
-                        <input type="number" min="9" max="80" class="form-control" placeholder="14., 9-80"
-                            aria-label="age" id="age" required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Age </span>
+                            <input type="number" min="9" max="80" class="form-control" placeholder="14., 9-80"
+                                aria-label="age" id="age" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">School </span>
-                        <input type="text" class="form-control" placeholder="Optional, Shree Ram Public School, Mokama"
-                            aria-label="school" id="school">
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">School </span>
+                            <input type="text" class="form-control"
+                                placeholder="Optional, Shree Ram Public School, Mokama" aria-label="school" id="school">
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Email </span>
-                        <input type="email" class="form-control" placeholder="example123@gmail.com" aria-label="email"
-                            id="email">
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email </span>
+                            <input type="email" class="form-control" placeholder="example123@gmail.com"
+                                aria-label="email" id="email">
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Mobile No. </span>
-                        <input type="number" class="form-control" placeholder="1234567890" aria-label="mobile"
-                            id="mobile">
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Mobile No. </span>
+                            <input type="number" class="form-control" placeholder="1234567890" aria-label="mobile"
+                                id="mobile">
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
                     </div>
                     <div class="container-fluid w-100 mb-3">
                         <div>
@@ -192,14 +203,15 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary mb-3">Submit</button>
                 </form>
 
             </div>
         </div>
     </div>
-    <div class="bottom-0 d-flex justify-content-center align-items-center p-2">
-        <p class="m-0">Created with ❤ by Raman Jee. Please <button class="border-0 btn btn-primary" id="sendEmailBtn">Send Email</button> to us.
+    <div class="bottom-0 d-flex justify-content-center align-items-center p-2 w-100">
+        <p class="m-0 text-center">Created with ❤ by Raman Jee. Please <button
+                class="border-0 bg-white text-decoration-underline" id="sendEmailBtn">Send Email</button> to us.
         </p>
     </div>
 

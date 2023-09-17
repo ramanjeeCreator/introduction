@@ -1,3 +1,49 @@
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body>div {
+    max-width: 100%;
+}
+
+#container-2 {
+    min-height: 100vh;
+    background: linear-gradient(96deg, rgb(249 3 3), rgb(12 16 195), rgb(10 195 94));
+    margin: 0;
+    justify-content: flex-start;
+}
+
+#head-user {
+    font-family: Superior title, Times New Roman, sans-serif;
+    font-size: calc(3.375rem + 1.5vw) !important;
+}
+
+.add-class>ul {
+    font-family: monospace;
+}
+
+#container-3 {
+    height: 100vh;
+    background: #000;
+    margin: 0;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#head-1 {
+    font-size: calc(3rem + 1.5vw) !important;
+}
+
+#head-2 {
+    font-family: Superior title, Times New Roman, sans-serif;
+    font-size: calc(2rem + 1.5vw) !important;
+}
+
 .carousel-item img {
- min-height: 100vh;
+    min-height: 100vh;
+}
+
+.typed-cursor.typed-cursor--blink {
+    visibility: hidden !important;
 }
