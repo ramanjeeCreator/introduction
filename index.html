@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstraap.min.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Introduce yourself!</title>
 </head>
 
@@ -52,12 +53,13 @@
                     </li>
                     <li>Twitter :- <a href="https://twitter.com/Raman_Jee_0806" id="twitter-user">@Raman_Jee_0806</a>
                     </li>
-                    <li>Facebook :- <a href="https://www.facebook.com/profile.php?id=100094300701717" id="facebook-user">ramanjee0806</a></li>
+                    <li>Facebook :- <a href="https://www.facebook.com/profile.php?id=100094300701717"
+                            id="facebook-user">ramanjee0806</a></li>
                 </ul>
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-5 img-fluid user h-100 p-0">
-            <img src="./Images/user.png" style="height: 100%;" alt="">
+            <img src="./Images/user.png" style="height: 100%;" alt="" id="user-image">
         </div>
     </div>
     <div class="container-fluid bg-dark w-100 h-100 p-lg-5 pd-md-1 pd-lg-0 text-light row" id="container-3">
@@ -65,7 +67,8 @@
             <h1 id="head-1">Create your Own!</h1>
         </div>
         <div class="container-fluid bg-dark w-100 p-lg-5 p-md-2 p-sm-0 text-light row">
-            <div class="col-lg-5 col-md-11 col-sm-11 d-flex justify-content-center align-items-center" style="height: 200px;">
+            <div class="col-lg-5 col-md-11 col-sm-11 d-flex justify-content-center align-items-center"
+                style="height: 200px;">
                 <h1 class="h1 type-it-2" id="head-2">
                     Want to create your own? Let's fill it!
                 </h1>
@@ -88,6 +91,22 @@
                                 placeholder="Jee" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                    </div>
+                    <div class="container-fluid w-100 mb-3">
+                        <div id="drop-zone">
+                            <input type="file" id="file-input" style="display: none;" accept="image/*" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                            <label for="file-input"
+                                class="custom-file-upload bg-primary p-3 px-5 text-white rounded-pill fs-3 fw-bolder">
+                                Upload Image
+                            </label>
+                            <p class="fw-bolder fs-3 mt-4 mb-0" style="color: rgb(84 97 108 / var(--tw-text-opacity))">
+                                or drop a file,</p>
+                            <p class="fs-6">paste image <span class="text-decoration-underline" id="img-url">or
+                                    URL</span></p>
+                            <img src="" alt="Uploaded Image" id="uploaded-image" style="display: none;">
                         </div>
                     </div>
                     <div class="container-fluid w-100 mb-3">
@@ -130,7 +149,7 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text">Email </span>
                             <input type="email" class="form-control" placeholder="example123@gmail.com"
-                                aria-label="email" id="email">
+                                aria-label="email" id="email" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -139,7 +158,7 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text">Mobile No. </span>
                             <input type="number" class="form-control" placeholder="1234567890" aria-label="mobile"
-                                id="mobile">
+                                id="mobile" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -211,10 +230,11 @@
     </div>
     <div class="bottom-0 d-flex justify-content-center align-items-center p-2 w-100">
         <p class="m-0 text-center">Created with ❤ by Raman Jee. Please <button
-                class="border-0 bg-white text-decoration-underline" id="sendEmailBtn">Send Email</button> to us.
+                class="border-0 bg-white text-decoration-underline" id="sendEmailBtn">Send Review</button> to us.
         </p>
     </div>
 
+    <script src="./js/drag&drop.js"></script>
     <script src="./js/typed.js"></script>
     <script src="./js/form-validation.js"></script>
     <script src="./js/main.js"></script>

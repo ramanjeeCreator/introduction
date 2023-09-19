@@ -28,13 +28,14 @@
                     document.getElementById("twitter-user").href = `${document.querySelector('#twitter-url').value}`;
                     document.getElementById("facebook-user").innerHTML = `${document.querySelector('#facebook-username').value}`;
                     document.getElementById("facebook-user").href = `${document.querySelector('#facebook-url').value}`;
+                    document.getElementById("user-image").src = `${document.querySelector('#uploaded-image').src}`;
                     console.log(document.querySelector('.add-class'));
                 }
 
                 form.classList.add('was-validated')
             }, false)
         });
-    
+
 })()
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -183,6 +184,36 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector('#twitter-url ~ .invalid-feedback').innerHTML = customValidationMessage;
         } else {
             twitterUrl.setCustomValidity(""); // Clear the custom validation message
+        }
+    });
+    mobile.addEventListener("input", function () {
+        const inputValue = mobile.value;
+
+        if (inputValue.length != 10) {
+            let customValidationMessage = 'Invalid Phone Number';
+            mobile.setCustomValidity(customValidationMessage);
+            document.querySelector('#mobile ~ .invalid-feedback').innerHTML = customValidationMessage;
+        } else {
+            mobile.setCustomValidity(""); // Clear the custom validation message
+        }
+    });
+    email.addEventListener("input", function () {
+        const inputValue = email.value;
+
+        if (!/^[a-zA-Z0-9.@_]{1,30}$/.test(inputValue)) {
+            let customValidationMessage = 'Invalid Character in email';
+            email.setCustomValidity(customValidationMessage);
+            document.querySelector('#email ~ .invalid-feedback').innerHTML = customValidationMessage;
+        } else if(inputValue.search("@") == 0) {
+            let customValidationMessage = '@ is missing';
+            email.setCustomValidity(customValidationMessage);
+            document.querySelector('#email ~ .invalid-feedback').innerHTML = customValidationMessage;
+        } else if(inputValue.slice(0, 3).search("@") == 0) {
+            let customValidationMessage = '@ is at wrong place';
+            email.setCustomValidity(customValidationMessage);
+            document.querySelector('#email ~ .invalid-feedback').innerHTML = customValidationMessage;
+        } else {
+            email.setCustomValidity(""); // Clear the custom validation message
         }
     });
 });

@@ -47,3 +47,20 @@ body>div {
 .typed-cursor.typed-cursor--blink {
     visibility: hidden !important;
 }
+
+/* Define the styling for the drop zone */
+#drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+}
+
+/* Style the uploaded image */
+#uploaded-image {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 20px;
+}
